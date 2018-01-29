@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:orientation="vertical"
+    tools:context="com.example.happu.contectdatabase.SignUpActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorAccent"
+        android:src="@drawable/img"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/LastNameEditText"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/FirstNameEditText"
+                android:layout_below="@+id/FirstNameEditText"
+                android:hint="@string/last_name"
+                android:inputType="text"
+                android:textAlignment="inherit" />
+
+            <TextView
+                android:id="@+id/first_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/mobile"
+                android:layout_marginTop="33dp"
+                android:text="@string/first_name"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/last_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/LastNameEditText"
+                android:layout_alignBottom="@+id/LastNameEditText"
+                android:layout_alignParentStart="true"
+                android:text="@string/last_name"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/last_name"
+                android:layout_below="@+id/last_name"
+                android:layout_marginTop="27dp"
+                android:text="MOBILE NO"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/MobileEditText"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_above="@+id/PasswordEditText"
+                android:layout_alignStart="@+id/LastNameEditText"
+                android:hint="mobile"
+                android:inputType="numberDecimal"
+                android:textAlignment="inherit" />
+
+
+            <EditText
+                android:id="@+id/FirstNameEditText"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/first_name"
+                android:layout_alignBottom="@+id/first_name"
+                android:layout_marginStart="28dp"
+                android:layout_toEndOf="@+id/first_name"
+                android:hint="@string/first_name"
+                android:inputType="text"
+                android:textAlignment="inherit" />
+
+            <TextView
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/mobile"
+                android:layout_marginTop="19dp"
+                android:text="PASSWORD"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/PasswordEditText"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/password"
+                android:layout_alignBottom="@+id/password"
+                android:layout_alignStart="@+id/MobileEditText"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textAlignment="inherit" />
+
+            <Button
+                android:id="@+id/sign_up"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/PasswordEditText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="37dp"
+                android:background="@color/colorAccent"
+                android:text="@string/sign_up"
+                android:onClick="signUp"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
